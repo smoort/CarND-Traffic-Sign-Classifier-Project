@@ -20,9 +20,7 @@
 [image1]: ./writeupImgs/TrainingDatasetSpread.png "Training Data"
 
 
-
-
-### *Overview*
+### Solution Overview
 
 The solution like any Convolutional Neural Network (CNN) based image recognition, has the following steps :
 
