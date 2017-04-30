@@ -20,10 +20,15 @@
 [image1]: ./writeupImgs/TrainingDatasetSpread.png "Training Data"
 [image2]: ./writeupImgs/Classes.png "Class verfication"
 [image3]: ./writeupImgs/AugDatasetSpread.png "Augumented Data"
+[image4]: ./writeupImgs/Speed20-1.jpg "Original image"
+[image5]: ./writeupImgs/Speed20-2.jpg "Jittered image"
+[image6]: ./writeupImgs/Speed20-3.jpg "Jittered image"
+[image7]: ./writeupImgs/Speed20-4.jpg "Jittered image"
+[image8]: ./writeupImgs/Speed20-5.jpg "Jittered image"
 
 ### *Solution Overview*
 
-The solution like any Convolutional Neural Network (CNN) based image recognition, has the following steps :
+Like any other Convolutional Neural Network (CNN) based image recognition, the solution has the following steps :
 
 1. Load the training, validation and test data
 1. Review the data by exploring and visualizing it
@@ -61,11 +66,19 @@ b. The below bar chart of training and validation labels confirm that both of th
 From the training data bar graph, it is evident that the images are not evenly distributed.  The input dataset was enriched with two types of augumentations :
 
 1. Augumented with jittered versions of images existing in the training dataset
-1. Augumented with jittered versions of images downloaded from the internet.
+1. Augumented with jittered versions of images downloaded from the internet.  Below are some of the jittered images.
+![alt text][image4]![alt text][image5]![alt text][image6]![alt text][image7]![alt text][image8]
 
 The below bar graph shows the image distribution in the augumented dataset.  The distribution has been evened out to a reasonable extent.
 
 ![alt text][image3]
+
+
+### *Preprocessing*
+
+1. The color image was converted to grayscale to reduce the size of the training dataset, thereby reducing the training time and cost.
+1. The grayscaled image was normalized to have 0 mean to keep the numbers small
+
 
 ### Design and Test a Model Architecture
 
