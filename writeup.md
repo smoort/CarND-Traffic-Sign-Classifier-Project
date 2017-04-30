@@ -68,7 +68,7 @@ From the training data bar graph, it is evident that the images are not evenly d
 1. Augumented with jittered versions of images existing in the training dataset
 1. Augumented with jittered versions of images downloaded from the internet.  Below are some of the jittered images.
 
-![alt text][image4]   ![alt text][image5]    ![alt text][image6]    ![alt text][image7]   ![alt text][image8]
+        ![alt text][image4]        ![alt text][image5]        ![alt text][image6]        ![alt text][image7]       ![alt text][image8]
 
 The below bar graph shows the image distribution in the augumented dataset.  The distribution has been evened out to a reasonable extent.
 
