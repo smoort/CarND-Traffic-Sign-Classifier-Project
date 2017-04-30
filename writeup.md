@@ -18,8 +18,8 @@
 [//]: # (Image References)
 
 [image1]: ./writeupImgs/TrainingDatasetSpread.png "Training Data"
-[image1]: ./writeupImgs/Classes.png "Class verfication"
-[image1]: ./writeupImgs/AugDatasetSpread.png "Augumented Data"
+[image2]: ./writeupImgs/Classes.png "Class verfication"
+[image3]: ./writeupImgs/AugDatasetSpread.png "Augumented Data"
 
 ### *Solution Overview*
 
