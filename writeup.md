@@ -20,8 +20,6 @@ The goals / steps of this project are the following:
 
 [image1]: ./writeupImgs/Training Dataset spread.png "Training Data"
 
-
-
 ---
 
 ##*Overview*
