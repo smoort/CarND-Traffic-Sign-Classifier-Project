@@ -2,10 +2,10 @@
 
 ### This is a write up on the German Traffic sign recognition project by *Saravanan Moorthyrajan*
 
+---
 
-**Build a Traffic Sign Recognition Project**
+**Build a Traffic Sign Recognition Project** : The goals / steps of this project are the following:
 
-The goals / steps of this project are the following:
 * Load the provided data set
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [image1]: ./writeupImgs/TrainingDatasetSpread.png "Training Data"
 
 
----
+
 
 ### *Overview*
 
