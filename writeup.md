@@ -65,10 +65,17 @@ b. The below bar chart of training and validation labels confirm that both of th
 
 From the training data bar graph, it is evident that the images are not evenly distributed.  The input dataset was enriched with two types of augumentations :
 
-1. Augumented with jittered versions of images existing in the training dataset
-1. Augumented with jittered versions of images downloaded from the internet.  Below are some of the jittered images.
+**Existing Image Augumentation** : Created new images using images extracted from the training dataset and then jittering them.
+
+**New Image Augumentation** : Created new images using images downloaded from internet and then jittering them.
+
+Below are some of the jittered images.
 
     ![alt text][image4]      ![alt text][image5]      ![alt text][image6]      ![alt text][image7]     ![alt text][image8]
+
+
+
+Jittering techniques used were Rotation, Translation, Shear and Brightness.  Citation - Reused code for jittering from Vivek Yadav's repo.  Refer 'https://medium.com/@vivek.yadav/dealing-with-unbalanced-data-generating-additional-data-by-jittering-the-original-image-7497fe2119c3' for more details.
 
 The below bar graph shows the image distribution in the augumented dataset.  The distribution has been evened out to a reasonable extent.
 
@@ -81,25 +88,9 @@ The below bar graph shows the image distribution in the augumented dataset.  The
 1. The grayscaled image was normalized to have 0 mean to keep the numbers small
 
 
-### Design and Test a Model Architecture
+### *Model Architecture*
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-
-As a first step, I decided to convert the images to grayscale because ...
-
-Here is an example of a traffic sign image before and after grayscaling.
-
-![alt text][image2]
-
-As a last step, I normalized the image data because ...
-
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
 
 The difference between the original data set and the augmented data set is the following ... 
 
