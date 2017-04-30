@@ -1,8 +1,7 @@
 # **Traffic Sign Recognition Project Writeup**
-
+---
 ## This is a write up on the German Traffic sign recognition project by *Saravanan Moorthyrajan*
 
----
 
 **Build a Traffic Sign Recognition Project**
 
@@ -48,7 +47,7 @@ Below is a summary of the dataset provided :
 
 Visualization of dataset :  The below bar chart of training data indicates that the images are not evenly spread.  This can skew the learning in favour of images with higher presence.
 
-![alt text][image1]
+![Training Data][./writeupImgs/Training Dataset spread.png]
 
 ###Design and Test a Model Architecture
 
