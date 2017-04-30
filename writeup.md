@@ -63,7 +63,7 @@ b. The below bar chart of training and validation labels confirm that both of th
 
 ### *Data Augumentation*
 
-From the training data bar graph, it is evident that the images are not evenly distributed.  The input dataset was enriched with two types of augumentations :
+From the training data bar graph, it is evident that the images are not evenly distributed.  The input dataset was enriched with two types of augumentations.
 
 **Existing Image Augumentation** : Created new images using images extracted from the training dataset and then jittering them.
 
@@ -71,15 +71,14 @@ From the training data bar graph, it is evident that the images are not evenly d
 
 Below are some of the jittered images.
 
-    ![alt text][image4]      ![alt text][image5]      ![alt text][image6]      ![alt text][image7]     ![alt text][image8]
-
+![alt text][image4]      ![alt text][image5]      ![alt text][image6]      ![alt text][image7]     ![alt text][image8]
 
 
 Jittering techniques used were Rotation, Translation, Shear and Brightness.  Citation - Reused code for jittering from Vivek Yadav's repo.  Refer 'https://medium.com/@vivek.yadav/dealing-with-unbalanced-data-generating-additional-data-by-jittering-the-original-image-7497fe2119c3' for more details.
 
 The below bar graph shows the image distribution in the augumented dataset.  The distribution has been evened out to a reasonable extent.
 
-![alt text][image3]
+![alt text][image1]   ![alt text][image3]
 
 
 ### *Preprocessing*
@@ -90,9 +89,6 @@ The below bar graph shows the image distribution in the augumented dataset.  The
 
 ### *Model Architecture*
 
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-
-The difference between the original data set and the augmented data set is the following ... 
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
