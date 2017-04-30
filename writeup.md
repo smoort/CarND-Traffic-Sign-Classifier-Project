@@ -4,7 +4,7 @@
 
 ---
 
-**Build a Traffic Sign Recognition Project** : The goals / steps of this project are the following:
+### **Goals of the Traffic Sign Recognition Project**
 
 * Load the provided data set
 * Explore, summarize and visualize the data set
@@ -20,7 +20,7 @@
 [image1]: ./writeupImgs/TrainingDatasetSpread.png "Training Data"
 
 
-### Solution Overview
+### *Solution Overview*
 
 The solution like any Convolutional Neural Network (CNN) based image recognition, has the following steps :
 
