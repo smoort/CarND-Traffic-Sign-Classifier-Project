@@ -83,19 +83,19 @@ The below bar graphs shows the image distribution before and after augumentation
 
 ### *Design and Test a Model Architecture*
 
-### *Preprocessing*
+#### *Preprocessing*
 
 1. The color image was converted to grayscale to reduce the size of the training dataset, thereby reducing the training time and cost.
 1. The grayscaled image was normalized to have 0 mean to keep the numbers small
 
 
-### *Model Architecture*
+#### *Model Architecture*
 
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x1 Gray image   							| 
+| Input Layer      		| 32x32x1 Gray image   							| 
 | Layer 1 - Conv 5x5  	| 1x1 stride, valid padding, outputs 28x28x32 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x32 				|
@@ -104,17 +104,27 @@ My final model consisted of the following layers:
 | Layer 3 - Conv 1x1    | 1x1 stride, valid padding, outputs 10x10x128	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 5x5x128	 				|
-| Fully connected		| Input = 5x5x128. Output = 3200				|
-| Fully connected		| Input = 3200 Output = 512						|
-| Fully connected		| Input = 512 Output = 256						|
-| Fully connected		| Input = 256 Output = 128						|
-| Fully connected		| Input = 128 Output = 43						|
-|						|												|
+| Fully connected 0		| Input = 5x5x128. Output = 3200				|
+| Fully connected 1		| Input = 3200 Output = 512						|
+| Fully connected 2		| Input = 512 Output = 256						|
+| Fully connected 3		| Input = 256 Output = 128						|
+| DropOut Layer			| 0.5 Dropout during training					|
+| Output layer			| Input = 128 Output = 43						|
 
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### *Model Training*
 
-To train the model, I used an ....
+The following hyperparameters were used to train the model :
+
+* Weights were initialized with a mean of 0 and sigma of 0.1
+* Batch size of 128
+* Learn rate of 0.001
+* 20 Epochs
+
+AdamOptimizer was used to optimize the model.
+
+
+#### *Solution Approach*
 
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
