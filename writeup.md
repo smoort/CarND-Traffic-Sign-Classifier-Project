@@ -1,6 +1,6 @@
-#Traffic Sign Recognition Project Writeup
+# **Traffic Sign Recognition Project Writeup**
 
-###This is a write up on the German Traffic sign recognition project
+## This is a write up on the German Traffic sign recognition project by *Saravanan Moorthyrajan*
 
 ---
 
@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
+[image1]: ./writeupImgs/Training Dataset spread.png "Training Data"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
 [image4]: ./examples/placeholder.png "Traffic Sign 1"
@@ -30,7 +30,7 @@ The goals / steps of this project are the following:
 
 ---
 
-##Overview
+##*Overview*
 
 The solution like any Convolutional Neural Network (CNN) based image recognition, has the following steps :
 
@@ -44,22 +44,17 @@ The solution like any Convolutional Neural Network (CNN) based image recognition
 1. Train the model using the training dataset and cross validate against the validation dataset.
 1. Test the model against the test dataset
 
-###Data Set Summary & Exploration
+###*Data Set Summary & Exploration*
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+Below is a summary of the dataset provided :
 
-I used the pandas library to calculate summary statistics of the traffic
-signs data set:
+* Number of training images = 34799
+* Number of validation images = 4410
+* Number of testing images = 12630
+* Image data shape = [(32, 32, 3)]
+* Number of unique classes = 43
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
-
-####2. Include an exploratory visualization of the dataset.
-
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Visualization of dataset :  The below bar chart of training data indicates that the images are not evenly spread.  This can skew the learning in favour of images with higher presence.
 
 ![alt text][image1]
 
