@@ -42,7 +42,7 @@ Like any other Convolutional Neural Network (CNN) based image recognition, the s
 
 ### *Data Set Summary & Exploration*
 
-Dataset Summary :  Below list provides the summary of the input data
+**Dataset Summary** :  Below list provides the summary of the input data
 
 * Number of training images = 34799
 * Number of validation images = 4410
@@ -50,7 +50,7 @@ Dataset Summary :  Below list provides the summary of the input data
 * Image data shape = [(32, 32, 3)]
 * Number of unique classes = 43
 
-Visualization of dataset :
+**Visualization of dataset** :
 
 a. The below bar chart of training data indicates that the images are not evenly spread.  This can skew the learning in favour of images with higher presence.
 
