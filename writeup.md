@@ -76,10 +76,12 @@ Below are some of the jittered images.
 
 Jittering techniques used were Rotation, Translation, Shear and Brightness.  Citation - Reused code for jittering from Vivek Yadav's repo.  Refer 'https://medium.com/@vivek.yadav/dealing-with-unbalanced-data-generating-additional-data-by-jittering-the-original-image-7497fe2119c3' for more details.
 
-The below bar graph shows the image distribution in the augumented dataset.  The distribution has been evened out to a reasonable extent.
+The below bar graphs shows the image distribution before and after augumentation.  The distribution has been evened out to a reasonable extent.
 
 ![alt text][image1]   ![alt text][image3]
 
+
+### *Design and Test a Model Architecture*
 
 ### *Preprocessing*
 
@@ -89,24 +91,25 @@ The below bar graph shows the image distribution in the augumented dataset.  The
 
 ### *Model Architecture*
 
-
-
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
-
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Input         		| 32x32x1 Gray image   							| 
+| Layer 1 - Conv 5x5  	| 1x1 stride, valid padding, outputs 28x28x32 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x32 				|
+| Layer 2 - Conv 5x5   	| 1x1 stride, valid padding, outputs 10x10x64 	|
+| RELU					|												|
+| Layer 3 - Conv 1x1    | 1x1 stride, valid padding, outputs 10x10x128	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x128	 				|
+| Fully connected		| Input = 5x5x128. Output = 3200				|
+| Fully connected		| Input = 3200 Output = 512						|
+| Fully connected		| Input = 512 Output = 256						|
+| Fully connected		| Input = 256 Output = 128						|
+| Fully connected		| Input = 128 Output = 43						|
 |						|												|
-|						|												|
- 
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
