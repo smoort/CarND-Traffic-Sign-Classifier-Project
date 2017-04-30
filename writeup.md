@@ -1,6 +1,6 @@
 # **Traffic Sign Recognition Project Writeup**
 
-## This is a write up on the German Traffic sign recognition project by *Saravanan Moorthyrajan*
+### This is a write up on the German Traffic sign recognition project by *Saravanan Moorthyrajan*
 
 
 **Build a Traffic Sign Recognition Project**
@@ -22,7 +22,7 @@ The goals / steps of this project are the following:
 
 ---
 
-*Overview*
+### *Overview*
 
 The solution like any Convolutional Neural Network (CNN) based image recognition, has the following steps :
 
@@ -36,7 +36,7 @@ The solution like any Convolutional Neural Network (CNN) based image recognition
 1. Train the model using the training dataset and cross validate against the validation dataset.
 1. Test the model against the test dataset
 
-*Data Set Summary & Exploration* : Below is a summary of the dataset provided :
+### *Data Set Summary & Exploration* : Below is a summary of the dataset provided :
 
 * Number of training images = 34799
 * Number of validation images = 4410
