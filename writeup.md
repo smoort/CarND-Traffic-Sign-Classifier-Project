@@ -18,7 +18,8 @@
 [//]: # (Image References)
 
 [image1]: ./writeupImgs/TrainingDatasetSpread.png "Training Data"
-
+[image1]: ./writeupImgs/Classes.png "Class verfication"
+[image1]: ./writeupImgs/AugDatasetSpread.png "Augumented Data"
 
 ### *Solution Overview*
 
@@ -34,7 +35,9 @@ The solution like any Convolutional Neural Network (CNN) based image recognition
 1. Train the model using the training dataset and cross validate against the validation dataset.
 1. Test the model against the test dataset
 
-### *Data Set Summary & Exploration* : Below is a summary of the dataset provided :
+### *Data Set Summary & Exploration*
+
+Dataset Summary :  Below list provides the summary of the input data
 
 * Number of training images = 34799
 * Number of validation images = 4410
@@ -42,9 +45,27 @@ The solution like any Convolutional Neural Network (CNN) based image recognition
 * Image data shape = [(32, 32, 3)]
 * Number of unique classes = 43
 
-Visualization of dataset :  The below bar chart of training data indicates that the images are not evenly spread.  This can skew the learning in favour of images with higher presence.
+Visualization of dataset :
+
+a. The below bar chart of training data indicates that the images are not evenly spread.  This can skew the learning in favour of images with higher presence.
 
 ![alt text][image1]
+
+b. The below bar chart of training and validation labels confirm that both of them have the same number of classes
+
+![alt text][image2]
+
+
+### *Data Augumentation*
+
+From the training data bar graph, it is evident that the images are not evenly distributed.  The input dataset was enriched with two types of augumentations :
+
+1. Augumented with jittered versions of images existing in the training dataset
+1. Augumented with jittered versions of images downloaded from the internet.
+
+The below bar graph shows the image distribution in the augumented dataset.  The distribution has been evened out to a reasonable extent.
+
+![alt text][image3]
 
 ### Design and Test a Model Architecture
 
