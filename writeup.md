@@ -114,37 +114,35 @@ My final model consisted of the following layers:
 
 #### *Model Training*
 
-The following hyperparameters were used to train the model :
+Below are the key features of the training :
 
 * Weights were initialized with a mean of 0 and sigma of 0.1
 * Batch size of 128
 * Learn rate of 0.001
 * 20 Epochs
-
-AdamOptimizer was used to optimize the model.
+* AdamOptimizer was used to optimize the model.
 
 
 #### *Solution Approach*
 
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+LeNet architecture was used as the problem was approached as an image recognition problem.  Below are some of the key considerations :
+
+1. The hyperparameters were tuned first through a trial and error process.  Learning rate of 0.001 and batch size of 128 were found to be optimal for this model.  Epochs and weight considerations are given below.
+1. The model loss was similar for both color and gray images.  As gray images needed less training time and therefore less expensive, decided to gray scale the images.  Normalization was done to lower the range of input that the model had to operate on.
+1. The mean for weight initialization was always kept at zero.  The sigma was found to be sensitive depending on whether the image used was color or gray scale.  0.025 was found to be most effective for training with grayscale images.
+1. Experimented with multiple model configurations.  It was observed that increasing the filter depth of the convolutional layer increased the accuracy at the expense of processing time.  The numbers finalized in this model (32, 64, 128) seemed to provide the best results with reasonable training time.
+1. Adding additional convolutional layers increased the accuracy at the cost of training time.  Three layered convolutional network with ReLU was found to be most effective for this project.
+1. My intution was that SAME padding with smaller convolutional shapes would provide greater accuracy as details are not lost.  But the results proved otherwise and hence retained VALID padding.
+1. Max pooling has been applied to 2 out of 3 convolutional layers to reduce the size of image progressively.  Applying Max pooling to all layers reduced the accuracy without much trade off in training time.  Hence used only 1 Max pooling layer.
+1. Used 4 fully connected flat layers (including the output layer).
+1. Used Dropout before the output layer to reduce overfitting.
+1. Though the model was run for 20 epochs, the training saturated at epoch 10.  Did not want to rerun the model just to change the epoch and have left it at 20.  The accuracy is the same at both 10 and 20.
+1. The accuracy was similar across training, validation and test datasets.  Hence there is no underfitting or overfitting and the model has been trained at the right level.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
-
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+* Training set loss of 0.0364578
+* Validation set accuracy of 0.970
+* Test set accuracy of 0.945
 
 ###Test a Model on New Images
 
