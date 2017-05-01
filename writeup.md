@@ -32,6 +32,8 @@
 [image13]: ./writeupImgs/34LeftAhead.jpg "Left Ahead"
 [image14]: ./writeupImgs/LeftAheadLarge.jpg "Left Ahead Large"
 [image15]: ./writeupImgs/visualize_cnn.png "Conv Layer"
+[image16]: ./writeupImgs/Predictions.png "Bar graph showing predictions"
+
 
 ### *Solution Overview*
 
@@ -144,13 +146,13 @@ LeNet architecture was used as the problem was approached as an image recognitio
 1. Max pooling has been applied to 2 out of 3 convolutional layers to reduce the size of image progressively.  Applying Max pooling to all layers reduced the accuracy without much trade off in training time.  Hence used only 1 Max pooling layer.
 1. Used 4 fully connected flat layers (including the output layer).
 1. Used Dropout before the output layer to reduce overfitting.
-1. Though the model was run for 20 epochs, the training saturated at epoch 10.  Did not want to rerun the model just to change the epoch and have left it at 20.  The accuracy is the same at both 10 and 20.
-1. The overall training time was about 25 mins with each epoch taking around 2.5 mins
+1. The fine tuned model was run for both 10 and 20 epochs but the training saturated around epoch 10 and there wasnt significant improvement post that.  Hence used epoch of 10 for final run.
+1. The overall training time was about 24 mins with each epoch taking around 2 min 30 secs.
 1. The accuracy was similar across training, validation and test datasets.  Hence there is no underfitting or overfitting and the model has been trained at the right level.
 
 My final model results were:
-* Training set loss of 0.0364578
-* Validation set accuracy of 0.970
+* Training set loss of 0.141567
+* Validation set accuracy of 0.978
 * Test set accuracy of 0.945
 
 ---
@@ -179,36 +181,47 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Speed Limit 30  		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Child Crossing  		| Child Crossing    							| 
+| Left Ahead   			| Left Ahead									|
+| Speed Limit 30		| Speed Limit 30								|
+| Right of Way     		| Right of Way					 				|
+| No 17NoEntry			| No Entry      							|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. Intution on the wrong predictions :
+The model was able to correctly predict 5 of the 5 traffic signs, which gives an accuracy of 100%. 
 
-* 
-* 
 
 #### *Model Certainty - Softmax Probabilities*
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+The top 5 predictions and their corresponding labels are shown below. 
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+[[  6.43179953e-01   1.90313935e-01   1.53949484e-01   8.84528086e-03   3.11361137e-03]
+ [  9.99999762e-01   2.14126416e-07   2.88691571e-10   2.32388234e-10   7.96057248e-11]
+ [  9.99193847e-01   7.95350294e-04   4.91315450e-06   4.15528666e-06   1.58116438e-06]
+ [  1.00000000e+00   9.28225894e-20   2.15806075e-24   1.80071464e-24   2.36337427e-26]
+ [  1.00000000e+00   3.02043967e-18   5.70965295e-20   1.91350851e-20   2.11044632e-21]] 
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+ [[28 29 30 25 24] 
+ [34 38 35 15 22]
+ [ 1  2  0  5  4]
+ [11 26 30 22 21]
+ [17 14 16 34 40]]
+
+*Visual representation of the probabilities*
+
+![alt text][image16]
+
+
+From the bar graph, it is evident that the model is very sure about all images except the first image.  For the first image, the model is relatively sure that this is a child crossing (probability of 0.6). The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .643         			| Child Crossing								| 
+| .190     				| Bicycle Crossing								|
+| .154					| Ice											|
+| .008	      			| Road work						 				|
+| .003				    | Narrow Right      							|
 
-
-For the second image ... 
 
 ---
 
