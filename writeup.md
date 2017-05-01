@@ -30,6 +30,8 @@
 [image11]: ./writeupImgs/17NoEntry.jpg "No Entry"
 [image12]: ./writeupImgs/28Childcrossing.jpg "Child Crossing"
 [image13]: ./writeupImgs/34LeftAhead.jpg "Left Ahead"
+[image14]: ./writeupImgs/LeftAheadLarge.jpg "Left Ahead Large"
+[image15]: ./writeupImgs/visualize_cnn.png "Conv Layer"
 
 ### *Solution Overview*
 
@@ -211,6 +213,10 @@ For the second image ...
 ---
 
 ### *Visualizing the Neural Network*
+
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
+Shown below is the visualization of the first convolutional layer that activated for the 'Left Ahead' sign.  In this layer, the network seems to be recogonize the object shape and color contrast of the round sign which is filled with blue.
 
+![alt text][image14]
+![alt text][image15]
