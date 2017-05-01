@@ -33,7 +33,7 @@
 [image14]: ./writeupImgs/LeftAheadLarge.jpg "Left Ahead Large"
 [image15]: ./writeupImgs/visualize_cnn.png "Conv Layer"
 [image16]: ./writeupImgs/Predictions.png "Bar graph showing predictions"
-
+[image17]: ./writeupImgs/AccuracyGraph.png "Line graph showing training loss and validation accuracy by epoch"
 
 ### *Solution Overview*
 
@@ -155,6 +155,8 @@ My final model results were:
 * Validation set accuracy of 0.978
 * Test set accuracy of 0.945
 
+![alt text][image17]
+
 ---
 
 ### *Performance of model on New Images*
@@ -185,7 +187,7 @@ Here are the results of the prediction:
 | Left Ahead   			| Left Ahead									|
 | Speed Limit 30		| Speed Limit 30								|
 | Right of Way     		| Right of Way					 				|
-| No 17NoEntry			| No Entry      							|
+| No Entry  			| No Entry      							|
 
 
 The model was able to correctly predict 5 of the 5 traffic signs, which gives an accuracy of 100%. 
@@ -207,12 +209,12 @@ The top 5 predictions and their corresponding labels are shown below.
  [11 26 30 22 21]
  [17 14 16 34 40]]
 
-*Visual representation of the probabilities*
+**Visual representation of the probabilities**
 
 ![alt text][image16]
 
 
-From the bar graph, it is evident that the model is very sure about all images except the first image.  For the first image, the model is relatively sure that this is a child crossing (probability of 0.6). The top five soft max probabilities were
+From the bar graph, it is evident that the model is very sure about all images except the first image.  For the first image, the model is relatively sure that this is a child crossing (probability of 0.6). The top five soft max probabilities for the first image were :
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -229,7 +231,7 @@ From the bar graph, it is evident that the model is very sure about all images e
 
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-Shown below is the visualization of the first convolutional layer that activated for the 'Left Ahead' sign.  In this layer, the network seems to be recogonize the object shape and color contrast of the round sign which is filled with blue.
+Shown below is the visualization of the first convolutional layer that activated for the 'Left Ahead' sign.  In this layer, the network seems to recogonize the object shape and color contrast (Round sign with blue fill).
 
 ![alt text][image14]
 ![alt text][image15]
