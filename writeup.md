@@ -85,6 +85,7 @@ The below bar graphs shows the image distribution before and after augumentation
 
 ![alt text][image1]   ![alt text][image3]
 
+---
 
 ### *Design and Test a Model Architecture*
 
@@ -150,15 +151,25 @@ My final model results were:
 * Validation set accuracy of 0.970
 * Test set accuracy of 0.945
 
+---
+
 ### *Performance of model on New Images*
 
+#### *New images and their characteristics*
 
-Here are five German traffic signs that I found on the web:
+Below are the five new German traffic signs that were used to test the model.
 
 ![alt text][image9] ![alt text][image10] ![alt text][image11] 
 ![alt text][image12] ![alt text][image13]
 
-The first image might be difficult to classify because ...
+Each image has varying degree of classification difficulty.
+* The 'Speed Limit 30' sign has trees in the background and also includes some parts of the sign post above and below it.
+* The 'Right of way' sign is relatively clear and straight forward
+* The 'No Entry' sign is skewed and has a blue background.  Should be of moderate complexity.
+* The 'Child Crossing' sign is skewed and has trees in the backgroud which makes it a bit tricky.
+* The 'Left Ahead' sign is blurred which introduces moderate complexity.
+
+#### *Performance on New Images*
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -166,14 +177,19 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
+| Speed Limit 30  		| Stop sign   									| 
 | U-turn     			| U-turn 										|
 | Yield					| Yield											|
 | 100 km/h	      		| Bumpy Road					 				|
 | Slippery Road			| Slippery Road      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. Intution on the wrong predictions :
+
+* 
+* 
+
+#### *Model Certainty - Softmax Probabilities*
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -192,7 +208,9 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 For the second image ... 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
+---
+
+### *Visualizing the Neural Network*
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
 
