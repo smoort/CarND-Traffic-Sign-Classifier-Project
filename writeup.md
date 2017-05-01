@@ -25,6 +25,11 @@
 [image6]: ./writeupImgs/Speed20-3.jpg "Jittered image"
 [image7]: ./writeupImgs/Speed20-4.jpg "Jittered image"
 [image8]: ./writeupImgs/Speed20-5.jpg "Jittered image"
+[image9]: ./writeupImgs/01SpeedLimit30.jpg "Speed Limit 30" 
+[image10]: ./writeupImgs/11RighOfWay.jpg "Right of Way"
+[image11]: ./writeupImgs/17NoEntry.jpg "No Entry"
+[image12]: ./writeupImgs/28Childcrossing.jpg "Child Crossing"
+[image13]: ./writeupImgs/34LeftAhead.jpg "Left Ahead"
 
 ### *Solution Overview*
 
@@ -67,7 +72,7 @@ From the training data bar graph, it is evident that the images are not evenly d
 
 **Existing Image Augumentation** : Created new images using images extracted from the training dataset and then jittering them.
 
-**New Image Augumentation** : Created new images using images downloaded from internet and then jittering them.
+**New Image Augumentation** : Created 500 new images for each traffic sign using images downloaded from internet and then jittering them.
 
 Below are some of the jittered images.
 
@@ -119,7 +124,7 @@ Below are the key features of the training :
 * Weights were initialized with a mean of 0 and sigma of 0.1
 * Batch size of 128
 * Learn rate of 0.001
-* 20 Epochs
+* 10 Epochs
 * AdamOptimizer was used to optimize the model.
 
 
@@ -137,6 +142,7 @@ LeNet architecture was used as the problem was approached as an image recognitio
 1. Used 4 fully connected flat layers (including the output layer).
 1. Used Dropout before the output layer to reduce overfitting.
 1. Though the model was run for 20 epochs, the training saturated at epoch 10.  Did not want to rerun the model just to change the epoch and have left it at 20.  The accuracy is the same at both 10 and 20.
+1. The overall training time was about 25 mins with each epoch taking around 2.5 mins
 1. The accuracy was similar across training, validation and test datasets.  Hence there is no underfitting or overfitting and the model has been trained at the right level.
 
 My final model results were:
@@ -144,14 +150,13 @@ My final model results were:
 * Validation set accuracy of 0.970
 * Test set accuracy of 0.945
 
-###Test a Model on New Images
+### *Performance of model on New Images*
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image9] ![alt text][image10] ![alt text][image11] 
+![alt text][image12] ![alt text][image13]
 
 The first image might be difficult to classify because ...
 
